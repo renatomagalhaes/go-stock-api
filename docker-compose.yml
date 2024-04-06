@@ -5,10 +5,12 @@ services:
     container_name: app
     build:
       context: .
-      dockerfile: Dockerfile
-    working_dir: /go/src
+      dockerfile: ./docker/dev/Dockerfile
+      args:
+        - APP_ENV=development
+    working_dir: /opt/src/app
     volumes:
-      - .:/go/src
+      - .:/opt/src/app
     ports:
       - 8080:80
-    command: tail -f "/dev/null"
+      - 9001:9001

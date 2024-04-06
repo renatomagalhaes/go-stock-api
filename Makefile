@@ -1,5 +1,5 @@
 build:
-	GOOS=linux GOARCH=amd64 go build -o app cmd/app/main.go
+	@docker-compose up -d --build
 
 run:
 	./app
