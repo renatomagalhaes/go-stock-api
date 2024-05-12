@@ -3,6 +3,6 @@ CREATE TABLE stocks (
     sku VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
     type INT,
-    qtd INT NOT NULL,
+    quantity INT NOT NULL,
     PRIMARY KEY (id)
 );
