@@ -1,8 +1,8 @@
 build:
 	@docker-compose up -d --build
 
-run:
-	./app
+down:
+	@docker-compose down
 
-clean:
-	rm app
+test:
+	@docker run --rm -v ${PWD}:/app -w /app golang:1.22 go test ./...
